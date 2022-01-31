@@ -5,10 +5,12 @@
 <link rel="stylesheet" href="../css/icons/bootstrap-icons.css">
 <script src="../js/bootstrap.min.js"></script>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Registro</title>
 </head>
+
 <body class="bg_login">
     <header class="mmi_header">
         <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
@@ -16,73 +18,86 @@
                 <img src="../img/logo-neo-small.png">
                 <div class="fs-4">mini<span class="fs-2">MI</span></div>
             </a>
-            <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-                <a class="me-3 py-2 text-dark text-decoration-none bi-display" href="./clothing.html"> &nbsp;Ropa</a>
+
+
+            <nav class="navbar navbar-expand-lg navbar-light mmi_main_menu">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-basket"
+                                    href="../views/clothing.html">
+                                    &nbsp;Ropa</a></li>
+                            <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-emoji-smile"
+                                    href="../views/toys.html">
+                                    &nbsp;Juguetes</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-display"
+                                    href="../views/sign_in.html">
+                                    &nbsp;Registrarse</a></li>
+                            <li>
+                            <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-person"
+                                    href="../views/login.html">
+                                    &nbsp;Iniciar sesión</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item fas bi-map"
+                                    href="../views/location.html">
+                                    &nbsp;Ubicación</a></li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
-    <div class="container mt-5">
-        <form class="border p-3">
-            <fieldset class="border p-2">
-                <legend class="w-auto">Ingrese sus datos</legend>
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="mmi_form_container" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
 
-                <div class="row">
-                    <div class="col-md-4"">
-                    <label for=" nombre">Ingrese su nombre</label>
-                        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                            <div class="mb-md-5 mt-md-4 pb-5">
+
+                                <h2 class="fw-bold mb-2 text-uppercase">Iniciar sesión</h2>
+                                <p class="mmi_color mb-5">Ingresa tu usuario y contraseña</p>
+
+                                <div class="form-outline form-white mb-4">
+                                    <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+                                    <label class="form-label" for="typeEmailX">Email</label>
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                                    <label class="form-label" for="typePasswordX">Contraseña</label>
+                                </div>
+
+                                <p class="small mb-5 pb-lg-2"><a class="mmi_color" href="#!">Olvidé mi contraseña</a>
+                                </p>
+
+                                <button type="submit" class="btn mmi_btn">Entrar</button>
+                            </div>
+
+                            <div>
+                                <p class="mb-0">No tienes cuenta? <a href="../views/sign_in.html">
+                                        &nbsp;Registrate</a></p>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="apellido">Ingrese su apellido</label>
-                        <input type="text" class="form-control" id="apellido" placeholder="Apellido">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputPassword4">Cree una contraseña</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
-                    </div>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="inputAddress">Dirección de domicilio</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Calle y numero">
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-2">
-                        <label for="inputState">Provincia</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Seleccione...</option>
-                            <option>Cordoba...</option>
-                            <option>CABA...</option>
-                            <option>Mendoza...</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputCity">Localidad</label>
-                        <input type="text" class="form-control" id="inputCity">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="inputZip">Codigo postal</label>
-                        <input type="text" class="form-control" id="inputZip">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                            Autorizo a MiniMi a usar mis datos con el fin de sugerirme productos
-                        </label>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </fieldset>
-        </form>
-    </div>
+            </div>
+        </div>
+    </section>
     <footer id="mdb-footer" class="mt-3">
         <section class="d-flex ">
             <div class="container text-center text-md-start mt-5">
@@ -107,10 +122,10 @@
                         <hr class="mb-4 mt-0 d-inline-block mx-auto"
                             style="width: 60px; background-color: #7c4dff; height: 2px">
                         <p>
-                            <a href="clothing.html" class="">Ropa</a>
+                            <a href="../views/clothing.html" class="">Ropa</a>
                         </p>
                         <p>
-                            <a href="toys.html" class="">Juguetes</a>
+                            <a href="../views/toys.html" class="">Juguetes</a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -154,4 +169,5 @@
         <!-- Copyright -->
     </footer>
 </body>
+
 </html>

@@ -5,10 +5,12 @@
 <link rel="stylesheet" href="../css/icons/bootstrap-icons.css">
 <script src="../js/bootstrap.min.js"></script>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Ropa para bebes</title>
 </head>
+
 <body>
     <div>
         <header class="mmi_header">
@@ -17,8 +19,44 @@
                     <img src="../img/logo-neo-small.png">
                     <div class="fs-4">mini<span class="fs-2">MI</span></div>
                 </a>
-                <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-                    <a class="me-3 py-2 text-dark text-decoration-none bi-display" href="login.html"> &nbsp;Ingresar</a>
+
+
+                <nav class="navbar navbar-expand-lg navbar-light mmi_main_menu">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-basket"
+                                        href="../views/clothing.html">
+                                        &nbsp;Ropa</a></li>
+                                <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-emoji-smile"
+                                        href="../views/toys.html">
+                                        &nbsp;Juguetes</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-display"
+                                        href="../views/sign_in.html">
+                                        &nbsp;Registrarse</a></li>
+                                <li>
+                                <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-person"
+                                        href="../views/login.html">
+                                        &nbsp;Iniciar sesión</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item fas bi-map"
+                                        href="../views/location.html">
+                                        &nbsp;Ubicación</a></li>
+                            </ul>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </header>
@@ -28,7 +66,7 @@
                 <h4> <span>Ropa</span> </h4>
             </div>
             <div class="row mmi_product_row">
-                <div class="col-md-4">
+                <div class="col-md-4 mmi_card_container">
                     <div class="card rounded-sm mmi_card mmi_card--clothing">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex flex-row align-items-center time"> &nbsp; <i class="bi-emoji-smile"></i>
@@ -43,7 +81,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mmi_card_container">
                     <div class="card rounded-sm mmi_card mmi_card--clothing">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex flex-row align-items-center time"> &nbsp; <i class="bi-emoji-smile"></i>
@@ -59,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mmi_card_container">
                     <div class="card rounded-sm mmi_card mmi_card--clothing">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex flex-row align-items-center time"> &nbsp; <i class="bi-emoji-smile"></i>
@@ -69,7 +107,97 @@
                         <div class="text-center"> <img src="../img/vestidoPepas.png" width="250"> </div>
                         <div class="mmi_product_card_info">
                             <div class="text-center">
-                                <h3>Vestido pepas</h3> <span class="lead">$800</span>
+                                <h3>Vestido pepas</h3> <span class="lead">$1350</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mmi_card_container">
+                    <div class="card rounded-sm mmi_card mmi_card--clothing">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-row align-items-center time"> &nbsp; <i class="bi-emoji-smile"></i>
+                                <small class="ml-1">3x2</small>
+                            </div> <span class="mmi_product_favorite bi-star-fill" />
+                        </div>
+                        <div class="text-center"> <img src="../img/ropa7-removebg-preview.png" width="250"> </div>
+                        <div class="mmi_product_card_info">
+                            <div class="text-center">
+                                <h3>Conjunto rosado</h3> <span class="lead">$1500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mmi_card_container">
+                    <div class="card rounded-sm mmi_card mmi_card--clothing">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-row align-items-center time"> &nbsp; <i class="bi-emoji-smile"></i>
+                                <small class="ml-1">3x2</small>
+                            </div> <span class="mmi_product_favorite bi-star-fill" />
+                        </div>
+                        <div class="text-center"> <img src="../img/ropa2.png" width="250"> </div>
+                        <div class="mmi_product_card_info">
+                            <div class="text-center">
+                                <h3>Conjunto Conejo</h3> <span class="lead">$2100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mmi_card_container">
+                    <div class="card rounded-sm mmi_card mmi_card--clothing">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-row align-items-center time"> &nbsp; <i class="bi-emoji-smile"></i>
+                                <small class="ml-1">3x2</small>
+                            </div> <span class="mmi_product_favorite bi-star-fill" />
+                        </div>
+                        <div class="text-center"> <img src="../img/ropa3.png" width="250"> </div>
+                        <div class="mmi_product_card_info">
+                            <div class="text-center">
+                                <h3>Conjunto Mickey</h3> <span class="lead">$1900</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mmi_card_container">
+                    <div class="card rounded-sm mmi_card mmi_card--clothing">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-row align-items-center time"> &nbsp; <i class="bi-emoji-smile"></i>
+                                <small class="ml-1">3x2</small>
+                            </div> <span class="mmi_product_favorite bi-star-fill" />
+                        </div>
+                        <div class="text-center"> <img src="../img/ropa8-removebg-preview.png" width="250"> </div>
+                        <div class="mmi_product_card_info">
+                            <div class="text-center">
+                                <h3>Conjunto lazo</h3> <span class="lead">$1650</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mmi_card_container">
+                    <div class="card rounded-sm mmi_card mmi_card--clothing">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-row align-items-center time"> &nbsp; <i class="bi-emoji-smile"></i>
+                                <small class="ml-1">3x2</small>
+                            </div> <span class="mmi_product_favorite bi-star-fill" />
+                        </div>
+                        <div class="text-center"> <img src="../img/ropa9-removebg-preview.png" width="250"> </div>
+                        <div class="mmi_product_card_info">
+                            <div class="text-center">
+                                <h3>Conjunto invierno</h3> <span class="lead">$2000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mmi_card_container">
+                    <div class="card rounded-sm mmi_card mmi_card--clothing">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-row align-items-center time"> &nbsp; <i class="bi-emoji-smile"></i>
+                                <small class="ml-1">3x2</small>
+                            </div> <span class="mmi_product_favorite bi-star-fill" />
+                        </div>
+                        <div class="text-center"> <img src="../img/ropa10-removebg-preview.png" width="250"> </div>
+                        <div class="mmi_product_card_info">
+                            <div class="text-center">
+                                <h3>Monitos invierno</h3> <span class="lead">$2700</span>
                             </div>
                         </div>
                     </div>
@@ -97,10 +225,10 @@
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                                 style="width: 60px; background-color: #7c4dff; height: 2px">
                             <p>
-                                <a href="clothing.html" class="">Ropa</a>
+                                <a href="../views/clothing.html" class="">Ropa</a>
                             </p>
                             <p>
-                                <a href="toys.html" class="">Juguetes</a>
+                                <a href="../views/toys.html" class="">Juguetes</a>
                             </p>
                         </div>
                         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -141,4 +269,5 @@
             <!-- Copyright -->
         </footer>
 </body>
+
 </html>

@@ -5,112 +5,170 @@
 <link rel="stylesheet" href="css/icons/bootstrap-icons.css">
 <script src="js/bootstrap.min.js"></script>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Tienda de bebes Minimi</title>
-    <meta name="keywords" content="Ropa, Juguetes, Bebe, Ropa para chicos, Ropita de bebe">
-    <meta name="description"
-        content="Encontrá la ropa para chicos y ropita de bebe mas linda en Minimi, compralos con envío gratis y cuotas!">
+  <meta charset="UTF-8">
+  <title>Tienda de bebes Minimi</title>
+  <meta name="keywords" content="Ropa, Juguetes, Bebe, Ropa para chicos, Ropita de bebe">
+  <meta name="description"
+    content="Encontrá la ropa para chicos y ropita de bebe mas linda en Minimi, compralos con envío gratis y cuotas!">
 </head>
+
 <body>
-    <div>
-        <header class="mmi_header">
-            <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-                <a href="index.html" class="d-flex align-items-center text-dark text-decoration-none">
-                    <img src="img/logo-neo-small.png">
-                    <div class="fs-4">mini<span class="fs-2">MI</span></div>
-                </a>
-                <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-                    <a class="me-3 py-2 text-dark text-decoration-none bi-basket" href="./views/clothing.html">
-                        &nbsp;Ropa</a>
-                    <a class="me-3 py-2 text-dark text-decoration-none bi-display" href="./views/login.html">
-                        &nbsp;Ingresar</a>
-                </nav>
+  <div>
+    <header class="mmi_header">
+      <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <a href="index.html" class="d-flex align-items-center text-dark text-decoration-none">
+          <img src="img/logo-neo-small.png">
+          <div class="fs-4">mini<span class="fs-2">MI</span></div>
+        </a>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light mmi_main_menu">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-basket"
+                    href="./views/clothing.html">
+                    &nbsp;Ropa</a></li>
+                <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-emoji-smile"
+                    href="./views/toys.html">
+                    &nbsp;Juguetes</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-display"
+                    href="./views/sign_in.html">
+                    &nbsp;Registrarse</a></li>
+                <li>
+                <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-person"
+                    href="./views/login.html">
+                    &nbsp;Iniciar sesión</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item fas bi-map"
+                    href="./views/location.html">
+                    &nbsp;Ubicación</a></li>
+              </ul>
+              </li>
+              </ul>
             </div>
-        </header>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="mmi_promo_header p-3 pb-md-4 mx-auto text-center">
-                        <img src="img/promotion.png" />
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="mmi_promo_header p-3 pb-md-4 mx-auto text-center">
-                        <img src="img/nenaGuitarra.png" />
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="mmi_promo_header p-3 pb-md-4 mx-auto text-center">
-                        <img src="img/ninoGuitarraa-removebg-preview.png" />
-                    </div>
-                </div>
-            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="carousel slide mmi_carousel_container" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="mmi_promo_header p-3 pb-md-4 mx-auto text-center">
+            <img src="img/promotion.png" />
+          </div>
         </div>
+        <div class="carousel-item">
+          <div class="mmi_promo_header p-3 pb-md-4 mx-auto text-center">
+            <img src="img/nenaGuitarra.png" />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="mmi_promo_header p-3 pb-md-4 mx-auto text-center">
+            <img src="img/ninoGuitarraa-removebg-preview.png" />
+          </div>
+        </div>
+      </div>
     </div>
-    <footer id="mdb-footer" class="mt-3">
-        <section class="d-flex ">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold">MINImi</h6>
-                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #7c4dff; height: 2px">
-                        <p>
-                            Ropa para todas las etapas de la infancia
-                        </p>
-                    </div>
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold">Productos</h6>
-                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #7c4dff; height: 2px">
-                        <p>
-                            <a href="./views/clothing.html" class="">Ropa</a>
-                        </p>
-                        <p>
-                            <a href="./views/toys.html" class="">Juguetes</a>
-                        </p>
-                    </div>
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold">Social</h6>
-                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #7c4dff; height: 2px">
-                        <p>
-                            <a href="#!" class="bi-instagram">minimi</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="bi-facebook">miniMIShop</a>
-                        </p>
-                    </div>
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <a href="./views/contact.html">
-                            <h6 class="text-uppercase fw-bold">Contactanos</h6>
-                        </a>
-                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #7c4dff; height: 2px">
-                        <p><i class="fas bi-shop mr-3"></i> C. de Cordoba, Ninez 123, AR</p>
-                        <a href="./views/location.html">
-                            <p><i class="fas bi-map mr-3"></i> Ver mapa</p>
-                        </a>
-                        <p><i class="fas bi-mailbox mr-3"></i> info@minimi.com</p>
-                        <p><i class="fas bi-phone-fill mr-3"></i> + 54 234 567 88</p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2020 Copyright:
+  </div>
+  <div class="container mt-5">
+    <div class="row mmi_product_row">
+      <div class="col-md-6 mmi_card_container">
+        <!-- Content -->
+        <img class="mmi_img_promo" src="./img/promo_minimi.PNG" />
+      </div>
+      <div class="col-md-6 mmi_card_container" style="align-content: center;">
+        <!-- Content -->
+        <img class="mmi_img_promo" src="./img/promo_10.PNG" />
+      </div>
+      <div class="col-md-6 mmi_card_container">
+        <!-- Content -->
+        <img class="mmi_img_promo" src="./img/promo_pijama.PNG" />
+      </div>
+      <div class="col-md-6 mmi_card_container">
+        <!-- Content -->
+        <img class="mmi_img_promo" src="./img/promo_rider.PNG" />
+      </div>
+    </div>
+  </div>
+  <footer id="mdb-footer" class="mt-3">
+    <section class="d-flex ">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">MINImi</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px">
+            <p>
+              Ropa para todas las etapas de la infancia
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Productos</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px">
+            <p>
+              <a href="./views/clothing.html" class="">Ropa</a>
+            </p>
+            <p>
+              <a href="./views/toys.html" class="">Juguetes</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Social</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px">
+            <p>
+              <a href="#!" class="bi-instagram">minimi</a>
+            </p>
+            <p>
+              <a href="#!" class="bi-facebook">miniMIShop</a>
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <a href="../views/contact.html">
+              <h6 class="text-uppercase fw-bold">Contactanos</h6>
+            </a>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px">
+            <p><i class="fas bi-shop mr-3"></i> C. de Cordoba, Ninez 123, AR</p>
+            <a href="../views/location.html">
+              <p><i class="fas bi-map mr-3"></i> Ver mapa</p>
+            </a>
+            <p><i class="fas bi-mailbox mr-3"></i> info@minimi.com</p>
+            <p><i class="fas bi-phone-fill mr-3"></i> + 54 234 567 88</p>
+          </div>
+          <!-- Grid column -->
         </div>
-        <!-- Copyright -->
-    </footer>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+    </div>
+    <!-- Copyright -->
+  </footer>
 </body>
+
 </html>
