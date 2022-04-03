@@ -55,7 +55,12 @@ const modal_get_user_data = `<div id="whoAreYouModal" class="modal fade show" st
             </div>
         </div>
     </div>`
-const products = [{ id: 1, name: "Conjunto Party", price: 3000, path: "../img/conjunto-removebg-preview.png" },
+
+const categories = [{name:"toy", title:"Juguetes", description: "section for toy products"},
+                    {name:"clothing", title:"Ropa", description: "section for chothing products"}];
+
+const products = [
+ { id: 1, name: "Conjunto Party", price: 3000, path: "../img/conjunto-removebg-preview.png" },
  { id: 2, name: "Traje", price: 3000, path: "../img/bodyTirantes.png"},
  { id: 3, name: "Vestido pepas" , price: 1350, path: "../img/vestidoPepas.png"},
  { id: 4, name: "Conjunto rosado" , price: 1500, path: "../img/ropa7-removebg-preview.png"},
@@ -63,9 +68,13 @@ const products = [{ id: 1, name: "Conjunto Party", price: 3000, path: "../img/co
  { id: 6, name: "Conjunto Mickey" , price: 1900, path: "../img/ropa3.png"},
  { id: 7, name: "Conjunto lazo" , price: 1650, path: "../img/ropa8-removebg-preview.png"},
  { id: 8, name: "Conjunto invierno" , price: 2000, path: "../img/ropa9-removebg-preview.png"},
- { id: 9, name: "Monitos invierno" , price: 2700, path: "../img/ropa10-removebg-preview.png"}];
+ { id: 9, name: "Monitos invierno" , price: 2700, path: "../img/ropa10-removebg-preview.png"}
+
+];
 
  function startLoad(){
+    validateCategory();
+    loadTitle();
     loadProducts();
     if (localStorage.getItem("mmiLocalStoreUserName")=== "" || localStorage.getItem("mmiLocalStoreUserName")==null){
         let temp = document.createElement("div");
@@ -77,14 +86,33 @@ const products = [{ id: 1, name: "Conjunto Party", price: 3000, path: "../img/co
         document.body.appendChild(temp);
     }
  }
-
+/*
  function loadProducts(){
      for (const product of products){
          let productItem = document.createElement("div");
          let productContent = product_template.replace(/\$path_img/, product.path).replace(/\$pname/, product.name).replace(/\$price/, product.price);
          document.getElementsByClassName("mmi_product_row")[0].innerHTML += productContent;
      }
- }
+ }*/
+
+ function loadProducts(){
+
+     fetch("/json/products.json")
+     .then(function(res) {
+         return res.json();
+     })
+     .then(function(data){
+         let html ='';
+         data.forEach(function(product){
+             if (product.category==getCategory()){
+             html += product_template.replace(/\$path_img/, product.path).replace(/\$pname/, product.name).replace(/\$price/, product.price);
+             }
+         })
+         document.getElementsByClassName("mmi_product_row")[0].innerHTML=html;
+         });
+        
+        }
+
  function saveUsername(){
      localStorage.setItem("mmiLocalStoreUserName",document.getElementById("userFirstName").value);
      localStorage.setItem("mmiLocalStoreUserLastName",document.getElementById("userLastName").value);
@@ -93,4 +121,25 @@ const products = [{ id: 1, name: "Conjunto Party", price: 3000, path: "../img/co
 
  function hiUserHideModal(){
     document.getElementById("hiUserModal").remove();
+ }
+
+ function getCategory(){
+    const params = new URLSearchParams(window.location.search)
+    return (params.get('category')==null)?categories[0]:params.get('category');
+ }
+
+ function validateCategory(){
+     if (getCategoryDetail()== null){window.location.replace("/index.html");}
+    
+ }
+
+ function loadTitle(){
+    $(".mm-tag-title").append(getCategoryDetail().title)
+ }
+
+ function getCategoryDetail(){
+     result =categories.filter(function(element){
+        return element.name==getCategory();
+      });
+   return result.length>0?result[0]:null;
  }
