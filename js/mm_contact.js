@@ -1,4 +1,6 @@
-
+window.addEventListener('load', (event) => {
+    isContacFormSended();
+});
 
 const btn = document.getElementsByClassName('nmi_btn_send_contact')[0];
 console.log(btn);
@@ -8,12 +10,8 @@ const form  = document.getElementById('mmi-contact-form');
 
 
 btn.addEventListener('click', () => {
-    $('form').submit(function() {
-        console.info(JSON.stringify($('form').serializeObject()));
-        $('form').reste();
-        return false;
-    });
-        Swal.fire("Our First Alert", "With some body text and success icon!", "success");
+    $('form').validate();
+
 });
 
 $.fn.serializeObject = function(){
@@ -33,4 +31,10 @@ $.fn.serializeObject = function(){
 };
  
 
-
+function isContacFormSended(){
+    const params = new URLSearchParams(window.location.search)
+    if (params.get('send')==='sended')
+    {
+        Swal.fire("Gracias por contactarnos", "En un tiempo menor a 24 horas estaremos comunicandonos con vos", "success");
+    }
+ }

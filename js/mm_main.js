@@ -37,25 +37,9 @@ const modal_get_user_data = `<div id="whoAreYouModal" class="modal fade show" st
             </div>
         </div>
     </div>`
-    const modal_hi_user = `<div id="hiUserModal" class="modal fade show" style="display: block;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Hola!!</h5>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <p>Nos alegra que estes aqui</p>
-                    <form>
-                    <h3><b>${localStorage.getItem("mmiLocalStoreUserName")}</b></h3>
-                        <br>
-                        <button type="button" class="btn btn-primary" onclick="hiUserHideModal()">Enviar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>`
 
+const productPagePath = "/views/product.html";
+const loginPagePath = "/views/login.html";
 const categories = [{name:"toy", title:"Juguetes", description: "section for toy products"},
                     {name:"clothing", title:"Ropa", description: "section for chothing products"}];
 
@@ -73,27 +57,23 @@ const products = [
 ];
 
  function startLoad(){
-    validateCategory();
-    loadTitle();
-    loadProducts();
-    if (localStorage.getItem("mmiLocalStoreUserName")=== "" || localStorage.getItem("mmiLocalStoreUserName")==null){
-        let temp = document.createElement("div");
-        temp.innerHTML=modal_get_user_data;
-        document.body.appendChild(temp);
-    }else{
-        let temp = document.createElement("div");
-        temp.innerHTML=modal_hi_user;
-        document.body.appendChild(temp);
-    }
+    startLoadProduct();
+    addInfoSessionHeaderMenu();
+    startLoadLogin();
  }
-/*
- function loadProducts(){
-     for (const product of products){
-         let productItem = document.createElement("div");
-         let productContent = product_template.replace(/\$path_img/, product.path).replace(/\$pname/, product.name).replace(/\$price/, product.price);
-         document.getElementsByClassName("mmi_product_row")[0].innerHTML += productContent;
-     }
- }*/
+function startLoadProduct(){
+    if(isValidProductPage()){
+        validateCategory();
+        loadTitle();
+        loadProducts();
+    }
+}
+
+function startLoadLogin(){
+    if(isValidLoginPage()){
+        activationSectionLogin();
+    }
+}
 
  function loadProducts(){
 
@@ -129,8 +109,8 @@ const products = [
  }
 
  function validateCategory(){
-     if (getCategoryDetail()== null){window.location.replace("/index.html");}
-    
+     if (getCategoryDetail()== null){window.location.replace("/index.html");
+    }
  }
 
  function loadTitle(){
@@ -142,4 +122,38 @@ const products = [
         return element.name==getCategory();
       });
    return result.length>0?result[0]:null;
+ }
+
+ function isValidSesion(){
+    return (localStorage.getItem("mmiLocalStoreUserName")=== "" || localStorage.getItem("mmiLocalStoreUserName")==null)?false:true;
+ }
+
+ function addInfoSessionHeaderMenu(){
+    if (isValidSesion()){
+        $(".mm-tag-contact-info").append("Hola "+localStorage.getItem("mmiLocalStoreUserName"));   
+        }else{
+        $(".mm-tag-contact-info").append("Iniciar sesión");
+        }   
+     }  
+ 
+     function activationSectionLogin(){
+        if (isValidSesion()){
+                $(".mm-tag-login-not-started-session").addClass("d-none");
+                $(".mm-tag-login-session-started").removeClass("d-none");
+                $(".mm-tag-login-username").empty();
+                $(".mm-tag-login-username").append(localStorage.getItem("mmiLocalStoreUserName"));      
+            }else{
+                $(".mm-tag-login-not-started-session").removeClass("d-none");
+                $(".mm-tag-login-session-started").addClass("d-none"); 
+            }   
+         } 
+
+ function isValidProductPage(){
+    var pathname = window.location.pathname;
+    return pathname.toLowerCase()===productPagePath;
+ }
+
+ function isValidLoginPage(){
+    var pathname = window.location.pathname;
+    return pathname.toLowerCase()===loginPagePath;
  }

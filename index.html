@@ -4,6 +4,9 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/icons/bootstrap-icons.css">
 <script src="js/bootstrap.min.js"></script>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"  type="text/javascript"></script>
+<script src="../js/mm_main.js"></script>
 <html lang="en">
 
 <head>
@@ -14,7 +17,7 @@
     content="Encontrá la ropa para chicos y ropita de bebe mas linda en Minimi, compralos con envío gratis y cuotas!">
 </head>
 
-<body>
+<body onload="startLoad()">
   <div>
     <header class="mmi_header">
       <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
@@ -42,18 +45,18 @@
                   <li>
                       <hr class="dropdown-divider">
                   </li>
-                  <li>
-                      <hr class="dropdown-divider">
-                  </li>
                   <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item fas bi-map"
                           href="../views/location.html">
                           &nbsp;Ubicación</a></li>
+                          <li>
+                            <hr class="dropdown-divider">
+                        </li>
                   <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item fas bi-phone"
                           href="../views/contact.html">
                           &nbsp;Contacto</a></li>
-                  <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-person"
+                  <li><a class="me-3 py-2 text-dark text-decoration-none dropdown-item bi-person mm-tag-contact-info"
                           href="../views/login.html">
-                          &nbsp;Iniciar sesión</a></li>
+                          </a></li>
               </ul>
               </li>
               </ul>
