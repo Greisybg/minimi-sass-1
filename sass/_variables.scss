@@ -2,8 +2,12 @@ $color-primario: #fff8e6;
 $color-secundario: #ff7daf;
 $color-texto: #392b27;
 $color-borde: #a1978c;
+$color-card-toy: #f9d5d8;
+$color-card-clothing: #dad3ca;
 $subtittlebg: (
-    "toys": #fff203,
-    "clothing": #000000,
-    "location": #cccccc,
+    "toys": $color-texto,
+    "clothing": $color-texto,
+    "location": $color-texto,
 );
+$color-border: #392b27;
+$color-button: #ff7daf;

@@ -10,14 +10,19 @@
     color: $color-texto;
     box-shadow: 1px 1px 1px 1px rgba(55, 43, 58, 0.8);
     height: 380px;
+    padding: 5px 0px 5px 0px;
 
     &--toys {
-        @include products(rgb(229, 211, 236));
+        @include products($color-card-toy);
     }
 
     &--clothing {
-        @include products(rgb(181, 188, 243));
+        @include products($color-card-clothing);
     }
+}
+
+.mmi_card_container {
+    padding-bottom: 20px;
 }
 
 .subtitle {
@@ -73,4 +78,32 @@ body {
 
 .border {
     background-color: $color-borde;
+}
+
+.mmi_form_container {
+    background-color: $color-primario;
+    border-radius: 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-border;
+    padding: 20px;
+}
+
+.mmi_btn {
+    background-color: $color-button;
+    color: $color-texto;
+}
+
+.mmi_color {
+    color: $color-texto;
+}
+
+.mmi_img_promo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mmi_carousel_container {
+    height: 500px;
 }

@@ -11983,56 +11983,66 @@ fieldset:disabled .btn {
 }
 
 .mmi_header {
-  color: #392B27;
-  background-color: #FFF8E6;
+  color: #392b27;
+  background-color: #fff8e6;
   width: 100%;
   padding: 20px 24px 0px 25px;
   -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.6);
           box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.6);
 }
 
+.mmi_main_menu {
+  color: #392b27;
+  background-color: #fff8e6;
+}
+
 footer {
-  background-color: #FF7DAF;
+  background-color: #ff7daf;
 }
 
 footer a {
-  color: #392B27;
+  color: #392b27;
 }
 
 .mmi_card {
-  color: #392B27;
+  color: #392b27;
   -webkit-box-shadow: 1px 1px 1px 1px rgba(55, 43, 58, 0.8);
           box-shadow: 1px 1px 1px 1px rgba(55, 43, 58, 0.8);
   height: 380px;
+  padding: 5px 0px 5px 0px;
 }
 
 .mmi_card--toys {
-  background-color: #e5d3ec;
+  background-color: #f9d5d8;
 }
 
 .mmi_card--clothing {
-  background-color: #b5bcf3;
+  background-color: #dad3ca;
+}
+
+.mmi_card_container {
+  padding-bottom: 20px;
 }
 
 .subtitle, .mmi_product_subtitle_toys, .mmi_product_subtitle_clothing {
-  background-color: #FF7DAF;
+  background-color: #ff7daf;
   border-radius: 0.5ch;
 }
 
 .mmi_product_subtitle_toys {
-  color: #fff203;
+  color: #392b27;
 }
 
 .mmi_product_subtitle_clothing {
-  color: #000000;
+  color: #392b27;
 }
 
 .mmi_bg_color_primary {
-  background-color: #FFF8E6;
+  background-color: #fff8e6;
 }
 
 body {
-  color: #392B27;
+  color: #392b27;
   background: url("../img/logo-semi-trans.png");
 }
 
@@ -12062,11 +12072,39 @@ body {
 }
 
 .mmi_product_favorite {
-  color: #FF7DAF;
+  color: #ff7daf;
   padding-right: 10px;
 }
 
 .border {
   background-color: #a1978c;
+}
+
+.mmi_form_container {
+  background-color: #fff8e6;
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #392b27;
+  padding: 20px;
+}
+
+.mmi_btn {
+  background-color: #ff7daf;
+  color: #392b27;
+}
+
+.mmi_color {
+  color: #392b27;
+}
+
+.mmi_img_promo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mmi_carousel_container {
+  height: 500px;
 }
 /*# sourceMappingURL=style.css.map */
