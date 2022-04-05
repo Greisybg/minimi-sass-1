@@ -77,7 +77,7 @@ function startLoadLogin(){
 
  function loadProducts(){
 
-     fetch("/json/products.json")
+     fetch("../json/products.json")
      .then(function(res) {
          return res.json();
      })
@@ -150,10 +150,12 @@ function startLoadLogin(){
 
  function isValidProductPage(){
     var pathname = window.location.pathname;
-    return pathname.toLowerCase()===productPagePath;
+    console.log("isValidProductPage"+pathname);
+    return pathname.toLowerCase().includes(productPagePath);
  }
 
  function isValidLoginPage(){
     var pathname = window.location.pathname;
-    return pathname.toLowerCase()===loginPagePath;
+    console.log(pathname);
+    return pathname.toLowerCase().includes(loginPagePath);
  }
